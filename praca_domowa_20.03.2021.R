@@ -1,12 +1,20 @@
 #1. Napisz funkcję sprawdzająca czy 1 liczba jest podzielna przez druga użyj - %%
 
+ifDivided <- function(x, y) {
+  x %% y == 0
+}
+
+ifDivided(6, 3)
+ifDivided(4, 3)
 
 
 #2. Pociąg z Lublina do Warszawy przejechał połowę drogi ze średnią prędkością 120 km/h.
 
-Drugą połowę przejechał ze średnią prędkością 90 km/h.
+#Drugą połowę przejechał ze średnią prędkością 90 km/h.
 
-Jaka była średnia prędkość pociągu.
+#Jaka była średnia prędkość pociągu.
+
+
 
 
 
