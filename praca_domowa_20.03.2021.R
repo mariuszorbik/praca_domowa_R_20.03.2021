@@ -14,9 +14,31 @@ ifDivided(4, 3)
 
 #Jaka była średnia prędkość pociągu.
 
+lcm <- function(x, y) {
+  
+  if(x > y) {
+    greater = x
+  } else {
+    greater = y
+  }
+  
+  while(TRUE) {
+    if((greater %% x == 0) && (greater %% y == 0)) {
+      lcm = greater
+      break
+    }
+    greater = greater + 1
+  }
+  return(lcm)
+}
 
+s1 <- 120
+s2 <- 90
+lcmValue <- lcm(s1, s2)
 
+avSpeed <- 2/((lcmValue/s1/lcmValue) + (lcmValue/s2/lcmValue))
 
+paste("średnia prędkość pociągu wynosiła", round(avSpeed), "km/h")
 
 #3. Utwórz funkcję obliczającą współczynnik korelacji r Pearsona dla 2 wektorów o tej samej długości.
 Wczytaj dane plik dane.csv i oblicz współczynnik dla wagi i wzrostu. W komentarzu napisz co oznacza wynik.
@@ -47,3 +69,4 @@ Do złączania stringów:
   paste("string1","string2",sep="TU WSTAW SEPARATOR")
 Gdy mamy, rózne oznaczenia NA w plikach możemy wykorzystać ( w tym wypadku pusty znak i NA:
                                                                na.strings=c("","NA")
+                                                               
