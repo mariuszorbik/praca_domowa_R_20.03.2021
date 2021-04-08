@@ -41,10 +41,20 @@ avSpeed <- 2/((lcmValue/s1/lcmValue) + (lcmValue/s2/lcmValue))
 paste("średnia prędkość pociągu wynosiła", round(avSpeed), "km/h")
 
 #3. Utwórz funkcję obliczającą współczynnik korelacji r Pearsona dla 2 wektorów o tej samej długości.
-Wczytaj dane plik dane.csv i oblicz współczynnik dla wagi i wzrostu. W komentarzu napisz co oznacza wynik.
+# Wczytaj dane plik dane.csv i oblicz współczynnik dla wagi i wzrostu. W komentarzu napisz co oznacza wynik.
 
-?cor
-cor(1:10, c(1,5,2,9,4,2,2,4,5,7))
+corrPearson<- function (x,y){
+  return(sum((x-mean(x))*(y-mean(y)))/(sqrt(sum((x-mean(x))^2))*(sqrt(sum((y-mean(y))^2)))))
+  }
+
+corrPearson(1:10, 2:11)
+
+df <- read.table('dane.csv', header = T, sep = ';')
+
+corrPearson(df$waga, df$wzrost)
+
+# Odpowiedź: Współczynnik korelacji Pearsona wynoszący ~ 0,98, czyli bardzo blisko 1 oznacza, że istnieje silna zależność dodatnia między zmiennymi.  
+
 
 #4. Napisz funkcję zwracającą ramke danych z danych podanych przez użytkownika 
 #stworzDataFrame <- function(ile=1)
