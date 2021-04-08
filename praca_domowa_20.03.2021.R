@@ -43,7 +43,8 @@ paste("średnia prędkość pociągu wynosiła", round(avSpeed), "km/h")
 #3. Utwórz funkcję obliczającą współczynnik korelacji r Pearsona dla 2 wektorów o tej samej długości.
 Wczytaj dane plik dane.csv i oblicz współczynnik dla wagi i wzrostu. W komentarzu napisz co oznacza wynik.
 
-
+?cor
+cor(1:10, c(1,5,2,9,4,2,2,4,5,7))
 
 #4. Napisz funkcję zwracającą ramke danych z danych podanych przez użytkownika 
 #stworzDataFrame <- function(ile=1)
